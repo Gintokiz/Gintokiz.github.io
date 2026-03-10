@@ -1,0 +1,51 @@
+{
+    "personalInfo": {
+        "name": "Andres Lopez",
+        "title": "Developer & Multimedia Creator",
+        "email": "brandymami@gmail.com",
+        "social": {
+            "github": "https://gintokiz.github.io",
+            "linkedin": "https://www.linkedin.com/in/andres-lopez-93502920a"
+        }
+    },
+    "creative": {
+        "heroTitle": "Visual Storyteller",
+        "projects": [
+            {
+                "id": 1,
+                "title": "Progetto Video 1",
+                "type": "video",
+                "url": "/assets/videos/video1.mp4",
+                "description": "Breve descrizione del video."
+            },
+            {
+                "id": 2,
+                "title": "Servizio Fotografico A",
+                "type": "photo",
+                "url": "/assets/images/foto1.jpg",
+                "description": "Descrizione della sessione fotografica."
+            }
+        ]
+    },
+    "technical": {
+        "heroTitle": "Full Stack Developer",
+        "skills": [
+            "React",
+            "Node.js",
+            "Tailwind CSS",
+            "JavaScript (ES6+)",
+            "Git"
+        ],
+        "projects": [
+            {
+                "id": 1,
+                "title": "E-commerce App",
+                "tech": [
+                    "React",
+                    "Node.js"
+                ],
+                "link": "https://github.com/tuo-repo/ecommerce"
+            }
+        ]
+    }
+}

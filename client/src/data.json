@@ -13,17 +13,99 @@
         "projects": [
             {
                 "id": 1,
-                "title": "Progetto Video 1",
-                "type": "video",
-                "url": "/assets/videos/video1.mp4",
-                "description": "Breve descrizione del video."
+                "title": "Fashion Editorial",
+                "type": "photo",
+                "url": "/assets/images/foto1.jpg",
+                "description": "Servizio Cliente Privato",
+                "format": "4:5"
             },
             {
                 "id": 2,
-                "title": "Servizio Fotografico A",
+                "title": "Fashion Editorial",
                 "type": "photo",
-                "url": "/assets/images/foto1.jpg",
-                "description": "Descrizione della sessione fotografica."
+                "url": "/assets/images/foto2.jpg",
+                "description": "Servizio Cliente Privato",
+                "format": "4:5"
+            },
+            {
+                "id": 3,
+                "title": "Fashion Editorial",
+                "type": "photo",
+                "url": "/assets/images/foto3.jpg",
+                "description": "Servizio Cliente Privato",
+                "format": "4:5"
+            },
+            {
+                "id": 4,
+                "title": "Fashion Editorial",
+                "type": "photo",
+                "url": "/assets/images/foto4.jpg",
+                "description": "Servizio Cliente Privato",
+                "format": "4:5"
+            },
+            {
+                "id": 5,
+                "title": "Fashion Editorial",
+                "type": "photo",
+                "url": "/assets/images/foto5.jpg",
+                "description": "Servizio Cliente Privato",
+                "format": "4:5"
+            },
+            {
+                "id": 6,
+                "title": "Fashion Editorial",
+                "type": "photo",
+                "url": "/assets/images/foto6.jpg",
+                "description": "Servizio Cliente Privato",
+                "format": "4:5"
+            },
+            {
+                "id": 7,
+                "title": "Fashion Editorial",
+                "type": "photo",
+                "url": "/assets/images/foto7.jpg",
+                "description": "Servizio Cliente Privato",
+                "format": "4:5"
+            },
+            {
+                "id": 8,
+                "title": "Fashion Editorial",
+                "type": "photo",
+                "url": "/assets/images/foto8.jpg",
+                "description": "Servizio Cliente Privato",
+                "format": "4:5"
+            },
+            {
+                "id": 9,
+                "title": "Fashion Editorial",
+                "type": "photo",
+                "url": "/assets/images/foto9.jpg",
+                "description": "Servizio Cliente Privato",
+                "format": "4:5"
+            },
+            {
+                "id": 10,
+                "title": "Fashion Editorial",
+                "type": "photo",
+                "url": "/assets/images/foto10.jpg",
+                "description": "Servizio Cliente Privato",
+                "format": "4:5"
+            },
+            {
+                "id": 11,
+                "title": "Fashion Editorial",
+                "type": "photo",
+                "url": "/assets/images/foto11.jpg",
+                "description": "Servizio Cliente Privato",
+                "format": "4:5"
+            },
+            {
+                "id": 12,
+                "title": "Fashion Editorial",
+                "type": "photo",
+                "url": "/assets/images/foto12.jpg",
+                "description": "Servizio Cliente Privato",
+                "format": "4:5"
             }
         ]
     },

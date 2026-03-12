@@ -106,6 +106,38 @@
                 "url": "/assets/images/foto12.jpg",
                 "description": "Servizio Cliente Privato",
                 "format": "4:5"
+            },
+            {
+                "id": 13,
+                "title": "Video Project 1",
+                "type": "video",
+                "url": "/assets/videos/video1.mp4",
+                "description": "Video 1",
+                "format": "9:16"
+            },
+            {
+                "id": 14,
+                "title": "Video Project 2",
+                "type": "video",
+                "url": "/assets/videos/video2.mp4",
+                "description": "Video 2",
+                "format": "9:16"
+            },
+            {
+                "id": 15,
+                "title": "Video Project 3",
+                "type": "video",
+                "url": "/assets/videos/video3.mp4",
+                "description": "Video 3",
+                "format": "9:16"
+            },
+            {
+                "id": 16,
+                "title": "Video Project 4",
+                "type": "video",
+                "url": "/assets/videos/video4.mp4",
+                "description": "Video 4",
+                "format": "9:16"
             }
         ]
     },

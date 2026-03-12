@@ -18,6 +18,7 @@ export default function Card({ title, url, type, format, onClick }) {
                         loop
                         autoPlay
                         playsInline
+                        preload="metadata" // Migliora il caricamento iniziale
                     />
                 ) : (
                     <img

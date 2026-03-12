@@ -8,7 +8,8 @@ export default function Card({ title, url, type, format, onClick }) {
     return (
         <div
             onClick={onClick}
-            className="group relative bg-zinc-900 rounded-sm overflow-hidden border border-white/5 hover:border-white/20 transition-all duration-700 cursor-pointer"
+            // Aggiunto 'max-w-[280px]' e 'mx-auto' per contenere la dimensione
+            className="group relative bg-zinc-900 rounded-sm overflow-hidden border border-white/5 hover:border-white/20 transition-all duration-700 cursor-pointer w-full max-w-[280px] mx-auto"
         >
             <div className={`${formatClasses[format] || 'aspect-video'} overflow-hidden`}>
                 <img
@@ -18,7 +19,7 @@ export default function Card({ title, url, type, format, onClick }) {
                 />
             </div>
 
-            {/* Overlay Minimal */}
+            {/* Overlay */}
             <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
                 <span className="text-white text-xs tracking-[0.2em] uppercase font-light border-b border-white/40 pb-1">
                     View Image

@@ -8,7 +8,6 @@ export default function Card({ title, url, type, format, onClick }) {
     return (
         <div
             onClick={onClick}
-            // Aggiunto 'max-w-[280px]' e 'mx-auto' per contenere la dimensione
             className="group relative bg-zinc-900 rounded-sm overflow-hidden border border-white/5 hover:border-white/20 transition-all duration-700 cursor-pointer w-full max-w-[280px] mx-auto"
         >
             <div className={`${formatClasses[format] || 'aspect-video'} overflow-hidden`}>

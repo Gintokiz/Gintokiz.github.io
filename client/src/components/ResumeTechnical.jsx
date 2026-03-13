@@ -16,16 +16,14 @@ export default function ResumeTechnical() {
     return (
         <section className="bg-black text-white px-8 py-12 min-h-screen">
             <div className="max-w-7xl mx-auto space-y-16">
-
                 {/* 1. BLOCCO INTRO - Struttura Verticale */}
                 <div className="flex flex-col gap-8 mb-16">
                     <h1 className="flex flex-col leading-[0.8] tracking-tight font-bebas">
-                        {/* text-4xl di base (mobile), md:text-6xl per schermi medi/desktop */}
-                        <span className="text-4xl md:text-6xl uppercase">
+                        <span className="text-5xl md:text-8xl uppercase">
                             <span className="text-blue-500">TECH STACK</span>
                             <span className="text-white"> &</span>
                         </span>
-                        <span className="text-4xl md:text-6xl uppercase text-red-500 mt-2">
+                        <span className="text-5xl md:text-8xl uppercase text-red-500 -mt-1 md:-mt-2">
                             CREATIVE TOOLS
                         </span>
                     </h1>

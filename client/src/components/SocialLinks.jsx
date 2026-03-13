@@ -17,8 +17,6 @@ export default function SocialLinks() {
                         href={link.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        // Mobile: 12px | Desktop: 16px
-                        // Colore: white/50 grigio chiaro che muta in bianco al passaggio del mouse
                         className="text-[12px] md:text-[16px] tracking-[0.2em] uppercase text-white/50 hover:text-white transition-all duration-300 font-medium"
                     >
                         {link.name}

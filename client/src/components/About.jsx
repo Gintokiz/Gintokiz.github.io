@@ -39,6 +39,7 @@ export default function About() {
                         <span className="text-white/20 uppercase tracking-[0.2em] text-sm font-light select-none">
                             [foto 4:5]
                         </span>
+                        {/* TODO: Inserire foto */}
                         {/* Overlay decorativo per il futuro inserimento dell'immagine */}
                         <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500" />
                     </div>

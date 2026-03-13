@@ -100,7 +100,7 @@ export default function ResumeCreative() {
                         className="relative max-w-6xl w-full flex items-center justify-center cursor-default"
                         onClick={e => e.stopPropagation()}
                     >
-                        {/* Tasto CHIUDI - Più grande e Bold */}
+                        {/* Tasto CHIUDI*/}
                         <button
                             className="absolute -top-16 right-0 md:-right-4 text-white/40 hover:text-white uppercase tracking-[0.4em] text-sm md:text-lg font-bold transition-all duration-300 flex items-center gap-3"
                             onClick={() => setSelectedItem(null)}

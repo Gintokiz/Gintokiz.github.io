@@ -10,7 +10,7 @@ export default function Landing({ onSelect }) {
                 onClick={() => onSelect('creative')}
                 className="group relative flex-1 cursor-pointer transition-all duration-700 hover:flex-[1.2] border-b md:border-b-0 border-white/10 flex items-center justify-center"
             >
-                {/* Linea Verticale - Centrata perfettamente */}
+                {/* Linea Verticale */}
                 <div className="absolute right-0 top-1/2 -translate-y-1/2 h-[60%] w-[1px] bg-white/10 hidden md:block" />
 
                 <div className="flex flex-col items-center justify-center pointer-events-none p-4 text-center">
@@ -20,7 +20,7 @@ export default function Landing({ onSelect }) {
                     >
                         CREATIVE
                     </h2>
-                    <p className="mt-2 text-[10px] tracking-[0.5em] uppercase text-white/50 font-sans">Portfolio</p>
+                    <p className="mt-2 text-[12px] tracking-[0.5em] uppercase text-white/50 font-sans">Portfolio</p>
                 </div>
             </motion.div>
 
@@ -37,7 +37,7 @@ export default function Landing({ onSelect }) {
                     >
                         TECHNICAL
                     </h2>
-                    <p className="mt-2 text-[10px] tracking-[0.3em] uppercase text-white/50 font-sans">Curriculum Vitae</p>
+                    <p className="mt-2 text-[12px] tracking-[0.3em] uppercase text-white/50 font-sans">Curriculum Vitae</p>
                 </div>
             </motion.div>
         </div>

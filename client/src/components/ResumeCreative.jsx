@@ -3,9 +3,10 @@ import data from '../data.json';
 import Card from './Card';
 
 export default function ResumeCreative() {
-    const [selectedImg, setSelectedImg] = useState(null);
+    // Stato per gestire l'elemento selezionato (URL e tipo)
+    const [selectedItem, setSelectedItem] = useState(null);
 
-    // Filtro foto e video
+    // Filtro foto e video dal file JSON
     const photos = data.creative.projects.filter(project => project.type === 'photo');
     const videos = data.creative.projects.filter(project => project.type === 'video');
 
@@ -31,7 +32,11 @@ export default function ResumeCreative() {
                 {/* 2. GRIGLIA FOTO 1 */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {photos.slice(0, 4).map((p) => (
-                        <Card key={p.id} {...p} onClick={() => setSelectedImg(p.url)} />
+                        <Card
+                            key={p.id}
+                            {...p}
+                            onClick={() => setSelectedItem({ url: p.url, type: 'photo' })}
+                        />
                     ))}
                 </div>
 
@@ -52,7 +57,11 @@ export default function ResumeCreative() {
                 {/* 4. GRIGLIA FOTO 2 */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {photos.slice(4).map((p) => (
-                        <Card key={p.id} {...p} onClick={() => setSelectedImg(p.url)} />
+                        <Card
+                            key={p.id}
+                            {...p}
+                            onClick={() => setSelectedItem({ url: p.url, type: 'photo' })}
+                        />
                     ))}
                 </div>
 
@@ -68,15 +77,49 @@ export default function ResumeCreative() {
                 {/* 6. GRIGLIA VIDEO */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {videos.map((v) => (
-                        <Card key={v.id} {...v} onClick={() => setSelectedImg(v.url)} />
+                        <Card
+                            key={v.id}
+                            {...v}
+                            onClick={() => setSelectedItem({ url: v.url, type: 'video' })}
+                        />
                     ))}
                 </div>
             </div>
 
-            {/* Modal */}
-            {selectedImg && (
-                <div className="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-8 cursor-zoom-out" onClick={() => setSelectedImg(null)}>
-                    <img src={selectedImg} className="max-w-full max-h-[80vh] object-contain" alt="zoom" />
+            {/* Modal Universale per Foto e Video */}
+            {selectedItem && (
+                <div
+                    className="fixed inset-0 z-[200] bg-black/95 flex items-center justify-center p-4 md:p-12 cursor-pointer transition-all"
+                    onClick={() => setSelectedItem(null)}
+                >
+                    <div
+                        className="relative max-w-6xl w-full flex items-center justify-center cursor-default"
+                        onClick={e => e.stopPropagation()}
+                    >
+                        {/* Tasto CHIUDI - Più grande e Bold */}
+                        <button
+                            className="absolute -top-16 right-0 md:-right-4 text-white/40 hover:text-white uppercase tracking-[0.4em] text-sm md:text-lg font-bold transition-all duration-300 flex items-center gap-3"
+                            onClick={() => setSelectedItem(null)}
+                        >
+                            <span>Close</span>
+                            <span className="text-2xl md:text-4xl font-light">×</span>
+                        </button>
+
+                        {selectedItem.type === 'video' ? (
+                            <video
+                                src={selectedItem.url}
+                                controls
+                                autoPlay
+                                className="max-w-full max-h-[80vh] shadow-2xl outline-none"
+                            />
+                        ) : (
+                            <img
+                                src={selectedItem.url}
+                                className="max-w-full max-h-[80vh] object-contain shadow-2xl"
+                                alt="zoom content"
+                            />
+                        )}
+                    </div>
                 </div>
             )}
         </section>

@@ -16,12 +16,16 @@ export default function ResumeCreative() {
 
                 {/* 1. BLOCCO INTRO */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-                    <h1 className="flex flex-col items-start leading-[0.8] tracking-tight">
+                    {/* Aggiunto -mt-4 per alzare tutto il blocco del titolo */}
+                    <h1 className="flex flex-col items-start leading-[0.8] tracking-tight -mt-4">
                         <span className="text-5xl md:text-7xl font-light uppercase z-10">The Brandymami</span>
-                        <span className="text-3xl md:text-6xl font-normal uppercase text-[#C1121F] -mt-2 md:-mt-4">Project</span>
+                        <span className="text-3xl md:text-6xl font-normal uppercase text-[#C1121F] mt-2 md:mt-0">
+                            Project
+                        </span>
                     </h1>
-                    <div className="text-white/80 leading-relaxed text-lg md:text-xl font-sans font-light tracking-wide">
-                        <p className="text-lg font-light text-white/60 leading-relaxed">
+
+                    <div className="text-white/80 leading-relaxed text-lg md:text-xl font-sans font-light tracking-wide -mt-2 md:-mt-4">
+                        <p className="text-l md:text-xl font-light text-white/60 leading-relaxed">
                             Nato in provincia di Brescia per colmare un'assenza di riferimenti visivi locali,
                             Brandymami è il mio manifesto: un progetto che esplora il linguaggio cinematografico
                             ed editoriale come strumento per leggere la realtà.

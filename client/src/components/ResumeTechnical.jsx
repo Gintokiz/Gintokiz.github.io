@@ -17,21 +17,21 @@ export default function ResumeTechnical() {
         <section className="bg-black text-white px-8 py-12 min-h-screen">
             <div className="max-w-7xl mx-auto space-y-16">
 
-                {/* 1. BLOCCO INTRO */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+                {/* 1. BLOCCO INTRO - Struttura Verticale */}
+                <div className="flex flex-col gap-8 mb-16">
                     <h1 className="flex flex-col leading-[0.8] tracking-tight">
-                        <span className="text-6xl md:text-8xl font-normal uppercase">
+                        <span className="text-4xl md:text-6xl font-normal uppercase">
                             <span className="text-blue-500">TECH STACK</span>
                             <span className="text-white"> &</span>
                         </span>
-                        <span className="text-6xl md:text-8xl font-normal uppercase text-red-500 -mt-2">
+                        <span className="text-4xl md:text-6xl font-normal uppercase text-red-500 mt-2">
                             CREATIVE TOOLS
                         </span>
                     </h1>
-                    <div className="text-white/80 leading-relaxed text-xl md:text-2xl font-sans font-light tracking-wide mt-2">
+                    <div className="max-w-4xl text-white/80 leading-relaxed text-xl md:text-2xl font-sans font-light tracking-wide mt-2">
                         <p className="text-xl font-light text-white/60">
-                            Studente di Informatica in costante formazione, con un forte interesse per l'architettura dei sistemi e lo sviluppo software.
-                            Il mio percorso accademico è incentrato su tre ambiti principali: Web Development, IA e Machine Learning, Sistemi Embedded.
+                            Studio Informatica coltivando una visione d'insieme che unisce l'architettura dei sistemi allo sviluppo software.
+                            Il mio percorso accademico si articola attorno a tre pilastri: Web Development, IA & Machine Learning, e Sistemi Embedded.
                         </p>
                     </div>
                 </div>

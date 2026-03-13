@@ -6,4 +6,8 @@ body,
     height: 100%;
     margin: 0;
     background: #0a0a0a;
+    /* Forzo il browser mobile a non scalare o distorcere il layout */
+    /* Ho notato che su telegram, il browser mobile integrato  il layout si distorceva */
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
 }

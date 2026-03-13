@@ -19,12 +19,13 @@ export default function ResumeTechnical() {
 
                 {/* 1. BLOCCO INTRO - Struttura Verticale */}
                 <div className="flex flex-col gap-8 mb-16">
-                    <h1 className="flex flex-col leading-[0.8] tracking-tight">
-                        <span className="text-4xl md:text-6xl font-normal uppercase">
+                    <h1 className="flex flex-col leading-[0.8] tracking-tight font-bebas">
+                        {/* text-4xl di base (mobile), md:text-6xl per schermi medi/desktop */}
+                        <span className="text-4xl md:text-6xl uppercase">
                             <span className="text-blue-500">TECH STACK</span>
                             <span className="text-white"> &</span>
                         </span>
-                        <span className="text-4xl md:text-6xl font-normal uppercase text-red-500 mt-2">
+                        <span className="text-4xl md:text-6xl uppercase text-red-500 mt-2">
                             CREATIVE TOOLS
                         </span>
                     </h1>
@@ -43,7 +44,7 @@ export default function ResumeTechnical() {
                             <h3 className="text-lg uppercase tracking-[0.2em] text-blue-500 font-semibold">{group.category}</h3>
                             <div className="flex flex-wrap gap-4">
                                 {group.items.map((item) => (
-                                    <span key={item} className="text-2xl font-light text-white/70 hover:text-white transition-colors cursor-default">{item}</span>
+                                    <span key={item} className="text-xl font-light text-white/70 hover:text-white transition-colors cursor-default">{item}</span>
                                 ))}
                             </div>
                         </div>
@@ -72,7 +73,7 @@ export default function ResumeTechnical() {
                             <h3 className="text-lg uppercase tracking-[0.2em] text-red-500 font-semibold">{group.category}</h3>
                             <div className="flex flex-wrap gap-4">
                                 {creativeTools.find(g => g.category === group.category).items.map((item) => (
-                                    <span key={item} className="text-2xl font-light text-white/70 hover:text-white transition-colors cursor-default">{item}</span>
+                                    <span key={item} className="text-xl font-light text-white/70 hover:text-white transition-colors cursor-default">{item}</span>
                                 ))}
                             </div>
                         </div>

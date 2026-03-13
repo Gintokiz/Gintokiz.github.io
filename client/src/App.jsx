@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react'; // Aggiungi useEffect qui
 import { motion, AnimatePresence } from 'framer-motion';
 import Landing from './components/Landing';
 import ResumeCreative from './components/ResumeCreative';
@@ -9,10 +9,14 @@ import About from './components/About';
 import Contact from './components/Contact';
 
 function App() {
-  const [view, setView] = useState(null); // 'creative' o 'tech'
-  const [nav, setNav] = useState('home'); // 'home', 'about', 'contact'
+  const [view, setView] = useState(null);
+  const [nav, setNav] = useState('home');
 
-  // Funzione per decidere cosa mostrare nel main
+  // ScrollRestoration: forza lo scroll in cima ogni volta che cambia nav o view
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [nav, view]);
+
   const renderContent = () => {
     if (nav === 'about') return <About />;
     if (nav === 'contact') return <Contact />;
@@ -35,13 +39,12 @@ function App() {
       <main className="pt-32 px-6">
         <AnimatePresence mode="wait">
           <motion.div
-            key={nav + view} // Chiave unica per far scattare l'animazione al cambio
+            key={nav + view}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="w-full"
           >
-            {/* Pulsanti Back/Switch visibili solo se siamo in modalità CV */}
             {nav === 'home' && view && (
               <div className="fixed top-20 left-0 right-0 px-8 flex justify-between z-50 pointer-events-none">
                 <button

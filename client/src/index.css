@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 
 html,
 body,
@@ -10,4 +12,8 @@ body,
     /* Ho notato che su telegram, il browser mobile integrato  il layout si distorceva */
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: transparent;
+}
+
+.font-bebas {
+    font-family: 'Bebas Neue', sans-serif;
 }

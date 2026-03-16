@@ -1,4 +1,27 @@
+import { useState, useEffect } from 'react';
 import data from '../data.json';
+
+// Componente per l'effetto hacker
+const HackerText = ({ text, className }) => {
+    const [displayText, setDisplayText] = useState(text);
+    const charset = "A5LMNOP4QR2TUVWXYZ0123456789@#$";
+
+    useEffect(() => {
+        let iteration = 0;
+        let interval = setInterval(() => {
+            setDisplayText(prev =>
+                text.split("").map((letter, index) => {
+                    if (index < iteration) return text[index];
+                    return charset[Math.floor(Math.random() * charset.length)];
+                }).join("")
+            );
+            if (iteration >= text.length) clearInterval(interval);
+            iteration += 1 / 3;
+        }, 30);
+        return () => clearInterval(interval);
+    }, [text]);
+    return <span className={className}>{displayText}</span>;
+};
 
 export default function ResumeTechnical() {
     const techStack = [
@@ -16,7 +39,6 @@ export default function ResumeTechnical() {
     return (
         <section className="bg-black text-white px-8 py-12 min-h-screen">
             <div className="max-w-7xl mx-auto space-y-16">
-                {/* 1. BLOCCO INTRO - Struttura Verticale */}
                 <div className="flex flex-col gap-8 mb-16">
                     <h1 className="flex flex-col leading-[0.8] tracking-tight font-bebas">
                         <span className="text-5xl md:text-8xl uppercase">
@@ -35,11 +57,13 @@ export default function ResumeTechnical() {
                     </div>
                 </div>
 
-                {/* 2. TECH STACK (Blue) */}
+                {/* 2. TECH STACK (Effetto Hacker applicato qui) */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
                     {techStack.map((group) => (
                         <div key={group.category} className="space-y-6">
-                            <h3 className="text-lg uppercase tracking-[0.2em] text-blue-500 font-semibold">{group.category}</h3>
+                            <h3 className="text-lg uppercase tracking-[0.2em] text-blue-500 font-semibold">
+                                <HackerText text={group.category} />
+                            </h3>
                             <div className="flex flex-wrap gap-4">
                                 {group.items.map((item) => (
                                     <span key={item} className="text-xl font-light text-white/70 hover:text-white transition-colors cursor-default">{item}</span>
@@ -49,7 +73,6 @@ export default function ResumeTechnical() {
                     ))}
                 </div>
 
-                {/* 3. PARAGRAFO DESCRIZIONE TECNICA */}
                 <div className="border-y border-white/10 py-16 space-y-12">
                     <div className="text-white/80 leading-relaxed text-xl md:text-2xl font-sans font-light tracking-wide">
                         <p className="text-xl font-light text-white/60 mb-6">
@@ -64,13 +87,15 @@ export default function ResumeTechnical() {
                     </div>
                 </div>
 
-                {/* 4. CREATIVE TOOLS (Red) */}
+                {/* 4. CREATIVE TOOLS (Effetto Hacker applicato qui) */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
                     {creativeTools.map((group) => (
                         <div key={group.category} className="space-y-6">
-                            <h3 className="text-lg uppercase tracking-[0.2em] text-red-500 font-semibold">{group.category}</h3>
+                            <h3 className="text-lg uppercase tracking-[0.2em] text-red-500 font-semibold">
+                                <HackerText text={group.category} />
+                            </h3>
                             <div className="flex flex-wrap gap-4">
-                                {creativeTools.find(g => g.category === group.category).items.map((item) => (
+                                {group.items.map((item) => (
                                     <span key={item} className="text-xl font-light text-white/70 hover:text-white transition-colors cursor-default">{item}</span>
                                 ))}
                             </div>
@@ -78,7 +103,6 @@ export default function ResumeTechnical() {
                     ))}
                 </div>
 
-                {/* 5. PARAGRAFO DESCRIZIONE CREATIVA */}
                 <div className="border-y border-white/10 py-16 space-y-12">
                     <div className="text-white/80 leading-relaxed text-xl md:text-2xl font-sans font-light tracking-wide">
                         <p className="text-xl font-light text-white/60 leading-relaxed">
@@ -86,7 +110,6 @@ export default function ResumeTechnical() {
                         </p>
                     </div>
                 </div>
-
             </div>
         </section>
     );

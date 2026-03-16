@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'; // Aggiungi useEffect qui
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Landing from './components/Landing';
 import ResumeCreative from './components/ResumeCreative';
@@ -12,7 +12,6 @@ function App() {
   const [view, setView] = useState(null);
   const [nav, setNav] = useState('home');
 
-  // ScrollRestoration: forza lo scroll in cima ogni volta che cambia nav o view
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [nav, view]);
@@ -46,19 +45,29 @@ function App() {
             className="w-full"
           >
             {nav === 'home' && view && (
-              <div className="fixed top-20 left-0 right-0 px-8 flex justify-between z-50 pointer-events-none">
+              <div className="fixed top-20 left-0 right-0 px-6 md:px-8 flex justify-between z-50 pointer-events-none">
+
+                {/* Bottone Sinistro: Ritorno alla Landing */}
                 <button
                   onClick={() => setView(null)}
-                  className="pointer-events-auto text-[13px] tracking-[0.2em] uppercase opacity-50 hover:opacity-100 transition-all bg-black/20 backdrop-blur-sm px-4 py-2 rounded-sm border border-white/5"
+                  className="pointer-events-auto text-[11px] md:text-[13px] tracking-[0.2em] uppercase opacity-50 hover:opacity-100 transition-all bg-black/20 backdrop-blur-sm px-3 py-2 md:px-4 md:py-2 rounded-sm border border-white/5"
                 >
-                  ← Back
+                  <span className="md:hidden">← Back</span>
+                  <span className="hidden md:inline">← Portfolio</span>
                 </button>
-                <button
-                  onClick={() => setView(view === 'creative' ? 'tech' : 'creative')}
-                  className="pointer-events-auto text-[13px] tracking-[0.2em] uppercase opacity-50 hover:opacity-100 transition-all bg-black/20 backdrop-blur-sm px-4 py-2 rounded-sm border border-white/5"
+
+                {/* Bottone Destro: Download CV con Icona */}
+                <a
+                  href="/assets/Andres_Lopez_CV.pdf"
+                  download="Andres_Lopez_CV.pdf"
+                  className="pointer-events-auto flex items-center gap-2 text-[11px] md:text-[13px] tracking-[0.2em] uppercase opacity-50 hover:opacity-100 transition-all bg-black/20 backdrop-blur-sm px-3 py-2 md:px-4 md:py-2 rounded-sm border border-white/5"
                 >
-                  {view === 'creative' ? 'Technical CV →' : '← Portfolio'}
-                </button>
+                  <svg className="w-3 h-3 md:w-4 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                  </svg>
+                  <span className="md:hidden">CV</span>
+                  <span className="hidden md:inline">Download CV</span>
+                </a>
               </div>
             )}
 

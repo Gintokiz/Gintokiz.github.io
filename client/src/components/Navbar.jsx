@@ -19,7 +19,7 @@ export default function Navbar({ active, onNavigate, onResetView }) {
 
                 {/* SINISTRA: Nome / Logo - Rimpicciolito su mobile */}
                 <div className="cursor-pointer group" onClick={onResetView}>
-                    <h1 className="text-sm md:text-lg tracking-[0.6em] md:tracking-[1em] uppercase font-bold text-white whitespace-nowrap transition-opacity group-hover:opacity-60">
+                    <h1 className="text-sm md:text-lg tracking-[0.2em] md:tracking-[1em] uppercase font-bold text-white whitespace-nowrap transition-opacity group-hover:opacity-60">
                         ANDRES LOPEZ
                     </h1>
                 </div>

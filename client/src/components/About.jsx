@@ -36,11 +36,15 @@ export default function About() {
                 {/* COLONNA DESTRA: Foto (Sticky) */}
                 <div className="lg:sticky lg:top-32">
                     <div className="aspect-[4/5] w-full bg-zinc-900 border border-white/10 flex items-center justify-center relative overflow-hidden group transition-all duration-500 hover:border-white/30">
-                        <span className="text-white/20 uppercase tracking-[0.2em] text-sm font-light select-none">
-                            [foto 4:5]
-                        </span>
-                        {/* TODO: Inserire foto */}
-                        {/* Overlay decorativo per il futuro inserimento dell'immagine */}
+
+                        {/* Immagine Profilo */}
+                        <img
+                            src="/assets/Andres_Lopez_CV.jpg" // Assicurati che l'estensione sia corretta (.jpg, .png, ecc.)
+                            alt="Andres Lopez"
+                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        />
+
+                        {/* Overlay decorativo */}
                         <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500" />
                     </div>
                     <p className="mt-6 text-[10px] uppercase tracking-[0.3em] text-white/40 font-light">

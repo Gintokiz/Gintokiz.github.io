@@ -39,7 +39,7 @@ export default function About() {
 
                         {/* Immagine Profilo */}
                         <img
-                            src="/assets/Andres_Lopez_CV.jpg" // Assicurati che l'estensione sia corretta (.jpg, .png, ecc.)
+                            src="/assets/fotoProfilo.jpg"
                             alt="Andres Lopez"
                             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                         />
